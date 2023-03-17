@@ -23,6 +23,7 @@ export default function CreatePost() {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
+            Authorization: `Bearer ${import.meta.env.VITE_OPENAI_API_KEY}`,
           },
           body: JSON.stringify({ prompt: form.prompt }),
         });
